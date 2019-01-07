@@ -1,1 +1,1 @@
-This repository contains code which demonstrate the usage of Apache Calcite.
+This repository contains code which demonstrates the usage of Apache Calcite.

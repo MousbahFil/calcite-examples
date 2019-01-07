@@ -30,14 +30,14 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SimpleQueryPlanner {
+public class QueryPlannerTest {
 
 
   @Test
   public void canConvertQueryToExecutionPlanTest() throws Exception {
     // Simple connection implementation for loading schema from sales.json
     CalciteConnection connection = new SimpleCalciteConnection();
-    String salesSchema = Resources.toString(SimpleQueryPlanner.class.getClassLoader().getResource("sales.json"),
+    String salesSchema = Resources.toString(QueryPlannerTest.class.getClassLoader().getResource("sales.json"),
         Charset.defaultCharset());
     // ModelHandler reads the sales schema and load the schema to connection's root schema and sets the default schema
     new ModelHandler(connection, "inline:" + salesSchema);
